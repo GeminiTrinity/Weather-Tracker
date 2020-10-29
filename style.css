@@ -1,3 +1,22 @@
+#header {
+    background-color: rgb(245, 245, 245);
+}
+
 #nav-and-history {
-    background-color: gray;
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    margin-top: -20px;
+}
+
+#current-city, #five-day {
+    background-color: rgb(245, 245, 245);
+    padding:10px;
+    margin-top: -20px;
+    margin-left: -3px;
+    margin-bottom: 32px;
+}
+
+.container {
+    min-height: 100%;
+    min-width: 100%;
 }

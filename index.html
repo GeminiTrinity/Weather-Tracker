@@ -10,7 +10,7 @@
 
 <body>
  <!-- header bar -->
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" id="header">
         <div class="container">
           <h1 class="display-6">Weather Dashboard</h1>
         </div>
@@ -19,23 +19,23 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4" id="nav-and-history">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search for a City" id="city-search">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" id="search-button"><img src="assets/magnifying-glass.png" width="30" height="20"/></button>
                     </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
-                  
+                </div>
 <!-- current city -->
-            </div>
             <div class="col-lg-8">
-                <div class="row">
-                    hi
+                <div class="row" id="current-city">
+                    <h5>Current City:</h5>
+                    <div id="weather-view"></div>
                 </div>
 
 <!-- 5-day forecast -->
-                <div class="row">
-                    hi
+                <div class="row" id="five-day">
+                    <h5>5-Day Forecast:</h5>
                 </div>
             </div>
         </div>
