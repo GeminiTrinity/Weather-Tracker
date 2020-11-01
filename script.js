@@ -1,10 +1,12 @@
-$("#search-button").on("click", function() {
-    var searchResult = $("#city-search").val();
-});
+$("#search-button").on("click", function(event) {
+    event.preventDefault();
+    var city = $(".city-search").val();
 
-
-function weather(searchResult) {
     $.ajax({
-      type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + searchResult + "&appid=5e8ef1f436a1754fa78c99c12aed203d=imperial"
-    }
+      url: "http://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=5e8ef1f436a1754fa78c99c12aed203d",
+      method: "GET"
+    }).then(function(response) {
+        console.log(response)
+    })
+
+});
