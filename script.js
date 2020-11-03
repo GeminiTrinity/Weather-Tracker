@@ -4,15 +4,26 @@ $(document).ready(function() {
   $("#city-search").on("click", function(event) {
     event.preventDefault();
     var city = $("#city-input").val();
+
+    function cityButtons() {
+
+      var button = $("<button>");
+      button.addClass("city");
+      button.attr("data-name", city);
+      button.text(city);
+      $("#city-history").append(button);
+  }
+  cityButtons()
+
     $.ajax({
       type: "GET",
       url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&appid=5e8ef1f436a1754fa78c99c12aed203d",
       dataType: "json",
     }).then(function(response) {
 
-      
+       $("#weather-view").empty();
         var cityDiv = $("<div class='chosen-city'>");
-        var name = $("<h5>").text(" " + response.name);
+        var name = $("<h5>").text("" + response.name);
         cityDiv.append(name);
         var img = $("<img>").attr("src" + response.weather[0].icon);
         cityDiv.append(img)
