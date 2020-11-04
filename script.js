@@ -154,6 +154,7 @@ $(document).ready(function(displayCity) {
           button.text(cities[i]);
 
           $("#city-history").append(button);
+          
         }
        
        }; 
