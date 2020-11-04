@@ -21,13 +21,18 @@
     min-width: 100%;
 }
 
-.city {
+.city-button {
     background-color: white;
     border-radius: 12px;
-    width: 430px;
+    width: 350px;
     margin-top: 10px;
 }
 
 #weather-view {
     margin-left: 50px;
+}
+
+.card {
+    margin-right: 5px;
+    margin-left: 5px;
 }

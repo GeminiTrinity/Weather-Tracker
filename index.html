@@ -20,7 +20,7 @@
  <!-- search bar and history -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-4" id="nav-and-history">
+            <div class="col-lg-3" id="nav-and-history">
                 <form id="city-form">
                     <label for="city-input">Search for a City:</label>
                     <input type="text" id="city-input" name="city-input">
@@ -31,15 +31,40 @@
            
 
 <!-- current city -->
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <div class="row" id="current-city">
-                    <h5>Current City:   </h5>
+                    <h5>Current City:</h5>
                     <div id="weather-view"></div>
                 </div>
 
 <!-- 5-day forecast -->
                 <div class="row" id="five-day">
                     <h5>5-Day Forecast:</h5>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id="card-one">
+                        <div class="card-body">
+                            <div id="day-one"></div>
+                        </div>
+                      </div>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id="card-two">
+                    <div class="card-body">
+                        <div id="day-two"></div>
+                    </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id="card-three">
+                    <div class="card-body">
+                        <div id="day-three"></div>
+                    </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id="card-four">
+                    <div class="card-body">
+                        <div id="day-four"></div>
+                    </div>
+                    </div>
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id="card-five">
+                    <div class="card-body">
+                        <div id="day-five"></div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
