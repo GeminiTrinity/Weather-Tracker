@@ -36,7 +36,7 @@ $(document).ready(function(displayCity) {
       // 1st day
       var dayOne = $("<div class='city-daily'>");
       var weatherImg = response.list[3].weather[0].icon
-      var weatherURL = "http://openweathermap.org/img/wn/"+ weatherImg +".png"
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
       var img = $("<img>").attr("src", + weatherURL);
       dayOne.append(img)
       var temp = $("<p>").text("Temperature: " + response.list[3].main.temp + "°");
@@ -49,7 +49,7 @@ $(document).ready(function(displayCity) {
       // 2nd day
       var dayTwo = $("<div class='city-daily'>");
       var weatherImg = response.list[11].weather[0].icon
-      var weatherURL = "http://openweathermap.org/img/wn/"+ weatherImg +".png"
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
       var img = $("<img>").attr("src", + weatherURL);
       dayTwo.append(img)
       var temp = $("<p>").text("Temperature: " + response.list[11].main.temp + "°");
@@ -61,7 +61,7 @@ $(document).ready(function(displayCity) {
       // 3rd day
       var dayThree = $("<div class='city-daily'>");
       var weatherImg = response.list[19].weather[0].icon
-      var weatherURL = "http://openweathermap.org/img/wn/"+ weatherImg +".png"
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
       var img = $("<img>").attr("src", + weatherURL);
       dayThree.append(img)
       var temp = $("<p>").text("Temperature: " + response.list[19].main.temp + "°");
@@ -73,7 +73,7 @@ $(document).ready(function(displayCity) {
       // 4th day
       var dayFour = $("<div class='city-daily'>");
       var weatherImg = response.list[27].weather[0].icon
-      var weatherURL = "http://openweathermap.org/img/wn/"+ weatherImg +".png"
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
       var img = $("<img>").attr("src", + weatherURL);
       dayFour.append(img)
       var temp = $("<p>").text("Temperature: " + response.list[27].main.temp + "°");
@@ -85,7 +85,7 @@ $(document).ready(function(displayCity) {
       // 5th day
       var dayFive = $("<div class='city-daily'>");
       var weatherImg = response.list[35].weather[0].icon
-      var weatherURL = "http://openweathermap.org/img/wn/"+ weatherImg +".png"
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
       var img = $("<img>").attr("src", + weatherURL);
       dayFive.append(img)
       var temp = $("<p>").text("Temperature: " + response.list[35].main.temp+ "°");
@@ -107,7 +107,7 @@ $(document).ready(function(displayCity) {
 
     $.ajax({
       type: "GET",
-      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&appid=5e8ef1f436a1754fa78c99c12aed203d",
+      url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&appid=5e8ef1f436a1754fa78c99c12aed203d",
       dataType: "json",
     }).then(function(response) {
 
@@ -131,7 +131,7 @@ $(document).ready(function(displayCity) {
        
        $.ajax({
         type: "GET",
-        url: "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=5e8ef1f436a1754fa78c99c12aed203d",
+        url: "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=5e8ef1f436a1754fa78c99c12aed203d",
         dataType: "json",
       }).then(function(response) {
 
