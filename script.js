@@ -36,10 +36,10 @@ $(document).ready(function(displayCity) {
       // 1st day
       var dayOne = $("<div class='city-daily'>");
       var weatherImg = response.list[3].weather[0].icon
-      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
-      var img = $("<img>").attr("src", + weatherURL);
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg + ".png"
+      var img = $("<img>").attr("src", weatherURL);
       dayOne.append(img)
-      var temp = $("<p>").text("Temperature: " + response.list[3].main.temp + "°");
+      var temp = $("<p>").text("Temperature: " + response.list[3].main.temp + "°F");
       dayOne.append(temp);
       var humidity = $("<p>").text("Humidity: " + response.list[3].main.humidity + "%");
       dayOne.append(humidity);
@@ -49,10 +49,10 @@ $(document).ready(function(displayCity) {
       // 2nd day
       var dayTwo = $("<div class='city-daily'>");
       var weatherImg = response.list[11].weather[0].icon
-      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
-      var img = $("<img>").attr("src", + weatherURL);
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg + ".png"
+      var img = $("<img>").attr("src", weatherURL);
       dayTwo.append(img)
-      var temp = $("<p>").text("Temperature: " + response.list[11].main.temp + "°");
+      var temp = $("<p>").text("Temperature: " + response.list[11].main.temp + "°F");
       dayTwo.append(temp);
       var humidity = $("<p>").text("Humidity: " + response.list[11].main.humidity + "%");
       dayTwo.append(humidity);
@@ -61,10 +61,10 @@ $(document).ready(function(displayCity) {
       // 3rd day
       var dayThree = $("<div class='city-daily'>");
       var weatherImg = response.list[19].weather[0].icon
-      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
-      var img = $("<img>").attr("src", + weatherURL);
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg + ".png"
+      var img = $("<img>").attr("src", weatherURL);
       dayThree.append(img)
-      var temp = $("<p>").text("Temperature: " + response.list[19].main.temp + "°");
+      var temp = $("<p>").text("Temperature: " + response.list[19].main.temp + "°F");
       dayThree.append(temp);
       var humidity = $("<p>").text("Humidity: " + response.list[19].main.humidity + "%");
       dayThree.append(humidity);
@@ -73,10 +73,10 @@ $(document).ready(function(displayCity) {
       // 4th day
       var dayFour = $("<div class='city-daily'>");
       var weatherImg = response.list[27].weather[0].icon
-      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
-      var img = $("<img>").attr("src", + weatherURL);
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg + ".png"
+      var img = $("<img>").attr("src", weatherURL);
       dayFour.append(img)
-      var temp = $("<p>").text("Temperature: " + response.list[27].main.temp + "°");
+      var temp = $("<p>").text("Temperature: " + response.list[27].main.temp + "°F");
       dayFour.append(temp);
       var humidity = $("<p>").text("Humidity: " + response.list[27].main.humidity + "%");
       dayFour.append(humidity);
@@ -85,10 +85,10 @@ $(document).ready(function(displayCity) {
       // 5th day
       var dayFive = $("<div class='city-daily'>");
       var weatherImg = response.list[35].weather[0].icon
-      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg +".png"
-      var img = $("<img>").attr("src", + weatherURL);
+      var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg + ".png"
+      var img = $("<img>").attr("src", weatherURL);
       dayFive.append(img)
-      var temp = $("<p>").text("Temperature: " + response.list[35].main.temp+ "°");
+      var temp = $("<p>").text("Temperature: " + response.list[35].main.temp+ "°F");
       dayFive.append(temp);
       var humidity = $("<p>").text("Humidity: " + response.list[35].main.humidity + "%");
       dayFive.append(humidity);
@@ -113,16 +113,20 @@ $(document).ready(function(displayCity) {
 
        $("#weather-view").empty();
         var cityDiv = $("<div class='chosen-city'>");
+        var weatherImg = response.weather[0].icon
+        var weatherURL = "https://openweathermap.org/img/wn/"+ weatherImg + ".png"
+        var img = $("<img>").attr("src", weatherURL);
+        cityDiv.append(img)
         var name = $("<h5>").text("" + response.name);
         cityDiv.append(name);
-        var img = $("<img>").attr("src" + response.weather[0].icon);
-        cityDiv.append(img)
-        var temp = $("<p>").text("Temperature: " + response.main.temp + "°");
+        var temp = $("<p>").text("Temperature: " + response.main.temp + "°F");
         cityDiv.append(temp);
         var humidity = $("<p>").text("Humidity: " + response.main.humidity + "%");
         cityDiv.append(humidity);
         var wind = $("<p>").text("Wind Speeds: " + response.wind.speed + " mph");
         cityDiv.append(wind);
+
+        console.log(response)
       
         $("#weather-view").prepend(cityDiv)
         

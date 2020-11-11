@@ -1,15 +1,23 @@
+body {
+    background-color: rgb(0, 17, 255);
+}
+
+img {
+    float: right;
+}
+
 #header {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(69, 217, 228);
 }
 
 #nav-and-history {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(69, 217, 228);
     padding: 20px;
     margin-top: -20px;
 }
 
 #current-city, #five-day {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(69, 217, 228);
     padding:10px;
     margin-top: -20px;
     margin-left: -3px;
@@ -24,7 +32,7 @@
 .city-button {
     background-color: white;
     border-radius: 12px;
-    width: 350px;
+    width: 100%;
     margin-top: 10px;
 }
 
