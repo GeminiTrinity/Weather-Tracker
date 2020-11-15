@@ -3,8 +3,6 @@ var previousCity = document.getElementById(".city-button")
 
 $(document).ready(function(displayCity) {
 
-  $(document).on("click", "#city-button", displayCity);
-
   $("#card-one").css({"display" : "none"});
   $("#card-two").css({"display" : "none"});
   $("#card-three").css({"display" : "none"});
@@ -95,15 +93,7 @@ $(document).ready(function(displayCity) {
       $("#day-five").prepend(dayFive)
     })
 
-    function cityButtons() {
 
-      var button = $("<button>");
-      button.addClass("city-button");
-      button.attr("data-name", city);
-      button.text(city);
-      $("#city-history").append(button);
-  }
-  cityButtons()
 
     $.ajax({
       type: "GET",
@@ -126,7 +116,25 @@ $(document).ready(function(displayCity) {
         var wind = $("<p>").text("Wind Speeds: " + response.wind.speed + " mph");
         cityDiv.append(wind);
 
-        console.log(response)
+        function cityButtons() {
+
+          var button = $("<button>");
+          button.addClass("city-button");
+          button.attr("data-name", city);
+          button.text(city);
+          $("#city-history").append(button);
+        }
+        function cityHistory() {
+          for (var i  = 0; i < cities.length; i++) {
+          var button = $("<button>");
+          button.addClass("city-button");
+          button.attr("data-name", cities[i]);
+          button.text(cities[i]);
+          $("#city-history").append(button);
+          }
+       }; 
+
+          cityButtons()
       
         $("#weather-view").prepend(cityDiv)
         
@@ -145,26 +153,11 @@ $(document).ready(function(displayCity) {
         $("#weather-view").append(cityDiv)
 
         var cities = [];
-
-        function cityHistory() {
-          for (var i  = 0; i < cities.length; i++) {
-
-          var button = $("<button>");
-
-          button.addClass("city-button");
-
-          button.attr("data-name", cities[i]);
-
-          button.text(cities[i]);
-
-          $("#city-history").append(button);
-          
-        }
-       
-       }; 
       });
     });
     
   })
-  
+ 
   });
+
+  $(document).on("click", ".city-button", displayCity);
