@@ -5,4 +5,11 @@ Technologies used: HTML, CSS, JS, APIs (OpenWeatherMap), Bootstrap
 https://geminitrinity.github.io/Weather-Tracker/
 https://github.com/GeminiTrinity/Weather-Tracker
 
+Contact the developer:
+Jacob Krueger
+603-923-3614
+jmk4u14@gmail.com
+
+This project is licensed under the terms of the MIT license.
+
  ![image](https://user-images.githubusercontent.com/70424037/99163000-ecee6980-26d1-11eb-932f-b60ec9197541.png)
